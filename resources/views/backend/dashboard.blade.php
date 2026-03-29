@@ -256,7 +256,13 @@ Dashboard - Eager Loading
                                     <tr>
                                         <td>
                                             <div class="d-flex px-2 py-1">
-                                                <img src="@if(empty($d->img)){{ url('') }}/images/default-image.png @else {{ url('') }}/{{ $d->img }}@endif" loading="eager" style="height: 90px; width:auto;">
+                                                 @env('local')
+                                                <img src="@if(empty($d->img)){{ url('') }}/images/default-image.png @else {{ url('') }}/berita/{{ $d->img }}@endif" loading="eager" style="height: 90px; width:auto;">
+                                                @endenv
+
+                                                 @production
+                                                 <img src="@if(empty($d->img)){{ url('') }}/images/default-image.png @else {{ url('') }}/public/berita/{{ $d->img }}@endif" loading="eager" style="height: 90px; width:auto;">   
+                                                @endproduction
                                             </div>
                                         </td>
                                         <td>
@@ -307,7 +313,14 @@ Dashboard - Eager Loading
                                     <tr>
                                         <td>
                                             <div class="d-flex px-2 py-1">
-                                                <img src="@if(empty($d->img)){{ url('') }}/images/default-image.png @else {{ url('') }}/{{ $d->img }}@endif" loading="eager" style="height: 90px; width:auto;">
+                            
+                                                    @env('local')
+                                                    <img src="@if(empty($d->img)){{ url('') }}/images/default-image.png @else {{ url('') }}/infografis/{{ $d->img }}@endif" loading="eager" style="height: 90px; width:auto;">
+                                                    @endenv
+
+                                                    @production
+                                                    <img src="@if(empty($d->img)){{ url('') }}/images/default-image.png @else {{ url('') }}/public/infografis/{{ $d->img }}@endif" loading="eager" style="height: 90px; width:auto;">    
+                                                    @endproduction
                                             </div>
                                         </td>
                                         <td class="align-middle">
@@ -353,7 +366,15 @@ Dashboard - Eager Loading
                                         </td>
                                         <td>
                                             <div class="d-flex px-2 py-1">
-                                                <img src="@if(empty($d->img)){{ url('') }}/images/default-image.png @else {{ url('') }}/{{ $d->img }}@endif" loading="eager" style="height: 90px; width:auto;">
+                                                @env('local')
+                                                <img src="@if(empty($d->img)){{ url('') }}/images/default-image.png @else {{ url('') }}/kegiatan/{{ $d->img }}@endif" loading="eager" style="height: 90px; width:auto;">
+                                                @endenv
+
+                                                @production
+                                                <img src="@if(empty($d->img)){{ url('') }}/images/default-image.png @else {{ url('') }}/public/kegiatan/{{ $d->img }}@endif" loading="eager" style="height: 90px; width:auto;">
+                                                @endproduction
+
+
                                             </div>
                                         </td>
                                         <td class="align-middle">
@@ -456,7 +477,14 @@ Dashboard - Eager Loading
                                         </td>
                                         <td>
                                             <div class="d-flex px-2 py-1">
-                                                <img src="@if(empty($d->img)){{ url('') }}/images/default-image.png @else {{ url('') }}/{{ $d->img }}@endif" loading="eager" style="height: 90px; width:auto;">
+                                                @env('local')
+                                                <img src="@if(empty($d->img)){{ url('') }}/images/default-image.png @else {{ url('') }}/pedoman/{{ $d->img }}@endif" loading="eager" style="height: 90px; width:auto;">
+                                                @endenv
+
+                                                @production
+                                                <img src="@if(empty($d->img)){{ url('') }}/images/default-image.png @else {{ url('') }}/public/pedoman/{{ $d->img }}@endif" loading="eager" style="height: 90px; width:auto;">    
+
+                                                @endproduction
                                             </div>
                                         </td>
                                         <td class="align-middle">
