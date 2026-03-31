@@ -440,10 +440,10 @@ Landing Page - Eager Loading
               <div class="event-img">
                 @if(!empty($k->img))
                 @env('local')
-                  <img src="{{ url('')}}/kegiatan/ {{($k->img) }}" loading="eager" alt="{{ $k->name }}">
+                  <img src="{{ url('')}}/kegiatan/{{($k->img) }}" loading="eager" alt="{{ $k->name }}">
                 @endenv
                 @production
-                <img src="{{ url('')}}/public/kegiatan/ {{($k->img) }}" loading="eager" alt="{{ $k->name }}">
+                <img src="{{ url('')}}/public/kegiatan/{{($k->img) }}" loading="eager" alt="{{ $k->name }}">
                 @endproduction
                 @else
                   <div class="event-img-placeholder">
@@ -496,10 +496,10 @@ Landing Page - Eager Loading
       <div class="modal-body text-center p-4">
         @if($k->img)
         @env('local')
-        <img src="{{ url('')}}/kegiatan/ {{($k->img) }}" loading="eager" alt="{{ $k->name }}">
+        <img src="{{ url('')}}/kegiatan/{{($k->img) }}" class="img-fluid mb-3" loading="eager" alt="{{ $k->name }}">
         @endenv
         @production
-        <img src="{{ url('')}}/public/kegiatan/ {{($k->img) }}" loading="eager" alt="{{ $k->name }}">
+        <img src="{{ url('')}}/public/kegiatan/{{($k->img) }}" class="img-fluid mb-3" loading="eager" alt="{{ $k->name }}">
         @endproduction
         @endif
         @if($k->resume)
